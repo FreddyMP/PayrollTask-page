@@ -129,6 +129,33 @@ body {
     flex-shrink: 0;
 }
 
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    border: 2px solid var(--card-border);
+    background: var(--white);
+    color: var(--text-main);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.mobile-menu-toggle:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+[data-theme="dark"] .mobile-menu-toggle {
+    background: #334155;
+    border-color: rgba(148, 163, 184, 0.2);
+}
+
 .theme-toggle:hover {
     border-color: var(--primary);
     color: var(--primary);
@@ -550,6 +577,62 @@ h1 span {
     transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    padding: 2rem;
+    border-bottom: 1px solid var(--navbar-border);
+    box-shadow: var(--shadow);
+    z-index: 999;
+    animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu .nav-links {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.mobile-menu .nav-links a {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+    display: block;
+}
+
+.mobile-menu .nav-cta {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mobile-menu .nav-cta .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+[data-theme="dark"] .mobile-menu {
+    background: #1e293b;
+}
+
 @media (max-width: 992px) {
     .hero-grid, .split-section {
         grid-template-columns: 1fr;
@@ -559,5 +642,40 @@ h1 span {
 
     .nav-cta {
         gap: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links,
+    .navbar .nav-cta {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .hero-grid {
+        gap: 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-stats {
+        gap: 2rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-card {
+        padding: 3rem 2rem;
+    }
+
+    .cta-card h2 {
+        font-size: 2rem;
     }
 }

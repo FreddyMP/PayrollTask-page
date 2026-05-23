@@ -36,8 +36,25 @@
                 <i class="bi bi-sun-fill icon-sun"></i>
                 <i class="bi bi-moon-stars-fill icon-moon"></i>
             </button>
+            <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Abrir menú">
+                <i class="bi bi-list"></i>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <ul class="nav-links">
+            <li><a href="#features">Funciones</a></li>
+            <li><a href="#recruitment">Reclutamiento</a></li>
+            <li><a href="#automation">Automatización</a></li>
+            <li><a href="#payroll">Nómina</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="https://payrolltask-main-5kvhnv.free.laravel.cloud/" class="btn btn-outline">Acceso</a>
+            <a href="#contact" class="btn btn-primary">Empezar Ahora</a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <header class="hero">
@@ -239,6 +256,43 @@
                     } else {
                         html.removeAttribute('data-theme');
                     }
+                }
+            });
+
+            // Mobile menu toggle
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                if (mobileMenu.classList.contains('active')) {
+                    icon.classList.remove('bi-list');
+                    icon.classList.add('bi-x');
+                } else {
+                    icon.classList.remove('bi-x');
+                    icon.classList.add('bi-list');
+                }
+            });
+
+            // Close mobile menu when clicking on a link
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                    const icon = mobileMenuToggle.querySelector('i');
+                    icon.classList.remove('bi-x');
+                    icon.classList.add('bi-list');
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!mobileMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                    mobileMenu.classList.remove('active');
+                    const icon = mobileMenuToggle.querySelector('i');
+                    icon.classList.remove('bi-x');
+                    icon.classList.add('bi-list');
                 }
             });
         })();
