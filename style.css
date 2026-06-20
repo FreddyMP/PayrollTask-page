@@ -577,6 +577,147 @@ h1 span {
     transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
+/* Feature Modal */
+.feature-modal {
+   
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    animation: fadeIn 0.3s ease;
+}
+
+.feature-modal.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    animation: slideUp 0.4s ease;
+    border: 1px solid var(--card-border);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -45%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: var(--bg-light);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--text-main);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: var(--primary);
+    color: white;
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    padding: 2rem 2rem 1rem;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.modal-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--secondary);
+    margin: 0;
+}
+
+.modal-header h2 span {
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.media-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.video-container {
+    width: 100%;
+    height: 70vh;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--bg-light);
+    border: 1px solid var(--card-border);
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.feature-card {
+    cursor: pointer;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
 /* Mobile Menu */
 .mobile-menu {
     display: none;

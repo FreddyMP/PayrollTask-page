@@ -103,45 +103,50 @@
                 <p>Módulos diseñados por expertos en gestión humana para optimizar cada proceso administrativo.</p>
             </div>
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-card" data-feature="nomina">
                     <div class="icon-box"><i class="bi bi-calculator-fill"></i></div>
                     <h3>Nómina Automatizada</h3>
                     <p>Cálculos precisos de TSS, ISR(IR-17), beneficios y horas extras cumpliendo con la normativa
                         vigente.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-feature="reclutamiento">
                     <div class="icon-box"><i class="bi bi-file-earmark-text-fill"></i></div>
                     <h3>Reclutamiento y Selección</h3>
                     <p>Gestiona todo el ciclo de vida del reclutamiento con un sistema de ranking
                         basado en puntos.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-feature="contratos">
                     <div class="icon-box"><i class="bi bi-file-earmark-check-fill"></i></div>
                     <h3>Generación de Contratos</h3>
                     <p>Automatiza la creación de documentos legales con plantillas personalizables y variables
                         dinámicas.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-feature="organigrama">
+                    <div class="icon-box"><i class="bi bi-people-fill"></i></div>
+                    <h3>Organigrama</h3>
+                    <p>Visualiza la estructura organizacional de tu empresa de manera clara y actualizada.</p>
+                </div>
+                <div class="feature-card" data-feature="expedientes">
                     <div class="icon-box"><i class="bi bi-people-fill"></i></div>
                     <h3>Expedientes Digitales</h3>
                     <p>Centraliza toda la información de tus colaboradores en un solo lugar, seguro y accesible.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-feature="solicitudes">
                     <div class="icon-box"><i class="bi bi-calendar-check-fill"></i></div>
                     <h3>Gestión de Solicitudes</h3>
                     <p>Vacaciones, permisos y licencias gestionadas de forma digital con flujos de aprobación.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-feature="kpis">
                     <div class="icon-box"><i class="bi bi-graph-up-arrow"></i></div>
                     <h3>KPIs de Recursos Humanos</h3>
                     <p>Monitorea el rendimiento de tu equipo con métricas clave en tiempo real.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-feature="acceso">
                     <div class="icon-box"><i class="bi bi-door-open-fill"></i></div>
                     <h3>Registro de Acceso</h3>
                     <p>Registra y monitorea el acceso de tus colaboradores de manera eficiente.</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card" data-feature="tareas">
                     <div class="icon-box"><i class="bi bi-list-check"></i></div>
                     <h3>Tablero de<br> Tareas</h3>
                     <p>Visualiza y gestiona las tareas de tu equipo en un solo lugar.</p>
@@ -192,6 +197,26 @@
             </div>
         </div>
     </section>
+
+    <!-- Feature Modal -->
+    <div id="feature-modal" class="feature-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content" style="overflow-y: hidden; overflow-x: hidden;">
+            <button class="modal-close" aria-label="Cerrar modal">
+                <i class="bi bi-x-lg"></i>
+            </button>
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div class="media-section">
+                        <div class="video-container" id="modal-video"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -293,6 +318,85 @@
                     const icon = mobileMenuToggle.querySelector('i');
                     icon.classList.remove('bi-x');
                     icon.classList.add('bi-list');
+                }
+            });
+
+            // Feature Modal functionality
+            const featureModal = document.getElementById('feature-modal');
+            const modalOverlay = featureModal.querySelector('.modal-overlay');
+            const modalClose = featureModal.querySelector('.modal-close');
+            const modalTitle = document.getElementById('modal-title');
+            const modalVideo = document.getElementById('modal-video');
+            const featureCards = document.querySelectorAll('.feature-card');
+
+            // Feature data with example videos only
+            const featureData = {
+                nomina: {
+                    title: 'Nómina Automatizada',
+                    video: 'https://www.w3schools.com/html/mov_bbb.mp4'
+                },
+                reclutamiento: {
+                    title: 'Reclutamiento y Selección',
+                    video: 'https://www.w3schools.com/html/movie.mp4'
+                },
+                contratos: {
+                    title: 'Generación de Contratos',
+                    video: 'https://www.w3schools.com/html/mov_bbb.mp4'
+                },
+                expedientes: {
+                    title: 'Expedientes Digitales',
+                    video: 'https://www.w3schools.com/html/movie.mp4'
+                },
+                solicitudes: {
+                    title: 'Gestión de Solicitudes',
+                    video: 'https://www.w3schools.com/html/mov_bbb.mp4'
+                },
+                kpis: {
+                    title: 'KPIs de Recursos Humanos',
+                    video: 'https://www.w3schools.com/html/movie.mp4'
+                },
+                acceso: {
+                    title: 'Registro de Acceso',
+                    video: 'https://www.w3schools.com/html/mov_bbb.mp4'
+                },
+                tareas: {
+                    title: 'Tablero de Tareas',
+                    video: 'https://www.w3schools.com/html/movie.mp4'
+                }
+            };
+
+            // Open modal when clicking on feature card
+            featureCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const featureKey = card.getAttribute('data-feature');
+                    const data = featureData[featureKey];
+                    
+                    if (data) {
+                        modalTitle.textContent = data.title;
+                        
+                        // Clear previous content and add video
+                        modalVideo.innerHTML = `<video src="${data.video}" controls autoplay></video>`;
+                        
+                        // Show modal
+                        featureModal.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+
+            // Close modal functions
+            function closeModal() {
+                featureModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            modalClose.addEventListener('click', closeModal);
+            modalOverlay.addEventListener('click', closeModal);
+
+            // Close modal on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && featureModal.classList.contains('active')) {
+                    closeModal();
                 }
             });
         })();
