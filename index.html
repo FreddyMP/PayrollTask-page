@@ -14,12 +14,40 @@
 </head>
 
 <body>
+    <div>
+        <img src="construccionpng.png" alt="" width="100%" height="100%">
+    </div>
     <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">
-                <img src="logo-payrooltask.png" width="200" alt="PayrollTaks Logo">
-            </a>
+    <div class="pagina" style="display: none;">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">
+                    <img src="logo-payrooltask.png" width="200" alt="PayrollTaks Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#features">Funciones</a></li>
+                    <li><a href="#recruitment">Reclutamiento</a></li>
+                    <li><a href="#automation">Automatización</a></li>
+                    <li><a href="#payroll">Nómina</a></li>
+                </ul>
+                <div class="nav-cta">
+
+                    <a href="https://payrolltask-main-5kvhnv.free.laravel.cloud/" class="btn btn-outline">Acceso</a>
+                    <a href="#contact" class="btn btn-primary">Empezar Ahora</a>
+
+                </div>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <i class="bi bi-sun-fill icon-sun"></i>
+                    <i class="bi bi-moon-stars-fill icon-moon"></i>
+                </button>
+                <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Abrir menú">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
             <ul class="nav-links">
                 <li><a href="#features">Funciones</a></li>
                 <li><a href="#recruitment">Reclutamiento</a></li>
@@ -27,228 +55,205 @@
                 <li><a href="#payroll">Nómina</a></li>
             </ul>
             <div class="nav-cta">
-
                 <a href="https://payrolltask-main-5kvhnv.free.laravel.cloud/" class="btn btn-outline">Acceso</a>
                 <a href="#contact" class="btn btn-primary">Empezar Ahora</a>
-
-            </div>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
-                <i class="bi bi-sun-fill icon-sun"></i>
-                <i class="bi bi-moon-stars-fill icon-moon"></i>
-            </button>
-            <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Abrir menú">
-                <i class="bi bi-list"></i>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="mobile-menu">
-        <ul class="nav-links">
-            <li><a href="#features">Funciones</a></li>
-            <li><a href="#recruitment">Reclutamiento</a></li>
-            <li><a href="#automation">Automatización</a></li>
-            <li><a href="#payroll">Nómina</a></li>
-        </ul>
-        <div class="nav-cta">
-            <a href="https://payrolltask-main-5kvhnv.free.laravel.cloud/" class="btn btn-outline">Acceso</a>
-            <a href="#contact" class="btn btn-primary">Empezar Ahora</a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <span class="badge">Nueva Era de RRHH</span>
-                <h1>Gestión Humana <span>Simplificada</span> y Potente</h1>
-                <p>La plataforma integral que automatiza desde el reclutamiento hasta la nómina, permitiéndote enfocarte
-                    en lo más importante: las personas.</p>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn btn-outline">Solicitar Demo</a>
-                    <a href="#features" class="btn btn-outline">Ver funciones <i class="bi bi-arrow-right"></i></a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <strong>+500</strong>
-                        <span>Empresas</span>
-                    </div>
-                    <div class="stat">
-                        <strong>10k</strong>
-                        <span>Empleados</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-wrapper">
-                    <img src="hr_platform_hero.png" alt="HR Dashboard Preview">
-                    <div class="glass-card card-1">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <span>Candidato Contratado</span>
-                    </div>
-                    <div class="glass-card card-2">
-                        <i class="bi bi-graph-up-arrow"></i>
-                        <span>Eficiencia +45%</span>
-                    </div>
-                </div>
             </div>
         </div>
-    </header>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Todo lo que tu equipo <span>necesita</span></h2>
-                <p>Módulos diseñados por expertos en gestión humana para optimizar cada proceso administrativo.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card" data-feature="nomina">
-                    <div class="icon-box"><i class="bi bi-calculator-fill"></i></div>
-                    <h3>Nómina Automatizada</h3>
-                    <p>Cálculos precisos de TSS, ISR(IR-17), beneficios y horas extras cumpliendo con la normativa
-                        vigente.</p>
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="badge">Nueva Era de RRHH</span>
+                    <h1>Gestión Humana <span>Simplificada</span> y Potente</h1>
+                    <p>La plataforma integral que automatiza desde el reclutamiento hasta la nómina, permitiéndote
+                        enfocarte
+                        en lo más importante: las personas.</p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-outline">Solicitar Demo</a>
+                        <a href="#features" class="btn btn-outline">Ver funciones <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <strong>+500</strong>
+                            <span>Empresas</span>
+                        </div>
+                        <div class="stat">
+                            <strong>10k</strong>
+                            <span>Empleados</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-card" data-feature="reclutamiento">
-                    <div class="icon-box"><i class="bi bi-file-earmark-text-fill"></i></div>
-                    <h3>Reclutamiento y Selección</h3>
-                    <p>Gestiona todo el ciclo de vida del reclutamiento con un sistema de ranking
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="hr_platform_hero.png" alt="HR Dashboard Preview">
+                        <div class="glass-card card-1">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Candidato Contratado</span>
+                        </div>
+                        <div class="glass-card card-2">
+                            <i class="bi bi-graph-up-arrow"></i>
+                            <span>Eficiencia +45%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Todo lo que tu equipo <span>necesita</span></h2>
+                    <p>Módulos diseñados por expertos en gestión humana para optimizar cada proceso administrativo.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card" data-feature="nomina">
+                        <div class="icon-box"><i class="bi bi-calculator-fill"></i></div>
+                        <h3>Nómina Automatizada</h3>
+                        <p>Cálculos precisos de TSS, ISR(IR-17), beneficios y horas extras cumpliendo con la normativa
+                            vigente.</p>
+                    </div>
+                    <div class="feature-card" data-feature="reclutamiento">
+                        <div class="icon-box"><i class="bi bi-file-earmark-text-fill"></i></div>
+                        <h3>Reclutamiento y Selección</h3>
+                        <p>Gestiona todo el ciclo de vida del reclutamiento con un sistema de ranking
+                            basado en puntos.</p>
+                    </div>
+                    <div class="feature-card" data-feature="contratos">
+                        <div class="icon-box"><i class="bi bi-file-earmark-check-fill"></i></div>
+                        <h3>Generación de Contratos</h3>
+                        <p>Automatiza la creación de documentos legales con plantillas personalizables y variables
+                            dinámicas.</p>
+                    </div>
+                    <div class="feature-card" data-feature="organigrama">
+                        <div class="icon-box"><i class="bi bi-people-fill"></i></div>
+                        <h3>Organigrama</h3>
+                        <p>Visualiza la estructura organizacional de tu empresa de manera clara y actualizada.</p>
+                    </div>
+                    <div class="feature-card" data-feature="expedientes">
+                        <div class="icon-box"><i class="bi bi-people-fill"></i></div>
+                        <h3>Expedientes Digitales</h3>
+                        <p>Centraliza toda la información de tus colaboradores en un solo lugar, seguro y accesible.</p>
+                    </div>
+                    <div class="feature-card" data-feature="solicitudes">
+                        <div class="icon-box"><i class="bi bi-calendar-check-fill"></i></div>
+                        <h3>Gestión de Solicitudes</h3>
+                        <p>Vacaciones, permisos y licencias gestionadas de forma digital con flujos de aprobación.</p>
+                    </div>
+                    <div class="feature-card" data-feature="kpis">
+                        <div class="icon-box"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h3>KPIs de Recursos Humanos</h3>
+                        <p>Monitorea el rendimiento de tu equipo con métricas clave en tiempo real.</p>
+                    </div>
+                    <div class="feature-card" data-feature="acceso">
+                        <div class="icon-box"><i class="bi bi-door-open-fill"></i></div>
+                        <h3>Registro de Acceso</h3>
+                        <p>Registra y monitorea el acceso de tus colaboradores de manera eficiente.</p>
+                    </div>
+                    <div class="feature-card" data-feature="tareas">
+                        <div class="icon-box"><i class="bi bi-list-check"></i></div>
+                        <h3>Tablero de<br> Tareas</h3>
+                        <p>Visualiza y gestiona las tareas de tu equipo en un solo lugar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recruitment Deep Dive -->
+        <section id="recruitment" class="recruitment-section">
+            <div class="container split-section">
+                <div class="split-image">
+                    <div class="ranking-preview">
+                        <div class="preview-header">Ranking de Candidatos</div>
+                        <div class="preview-item">
+                            <span class="rank">1</span>
+                            <div class="name">Juan Pérez <small>98 pts</small></div>
+                            <div class="action">Contratar</div>
+                        </div>
+                        <div class="preview-item">
+                            <span class="rank">2</span>
+                            <div class="name">María García <small>92 pts</small></div>
+                            <div class="action disabled">Procesar</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="split-content">
+                    <h2>Reclutamiento de <span>Alto Impacto</span></h2>
+                    <p>Publica vacantes, recibe postulaciones y evalúa a los candidatos con nuestro sistema de ranking
                         basado en puntos.</p>
-                </div>
-                <div class="feature-card" data-feature="contratos">
-                    <div class="icon-box"><i class="bi bi-file-earmark-check-fill"></i></div>
-                    <h3>Generación de Contratos</h3>
-                    <p>Automatiza la creación de documentos legales con plantillas personalizables y variables
-                        dinámicas.</p>
-                </div>
-                <div class="feature-card" data-feature="organigrama">
-                    <div class="icon-box"><i class="bi bi-people-fill"></i></div>
-                    <h3>Organigrama</h3>
-                    <p>Visualiza la estructura organizacional de tu empresa de manera clara y actualizada.</p>
-                </div>
-                <div class="feature-card" data-feature="expedientes">
-                    <div class="icon-box"><i class="bi bi-people-fill"></i></div>
-                    <h3>Expedientes Digitales</h3>
-                    <p>Centraliza toda la información de tus colaboradores en un solo lugar, seguro y accesible.</p>
-                </div>
-                <div class="feature-card" data-feature="solicitudes">
-                    <div class="icon-box"><i class="bi bi-calendar-check-fill"></i></div>
-                    <h3>Gestión de Solicitudes</h3>
-                    <p>Vacaciones, permisos y licencias gestionadas de forma digital con flujos de aprobación.</p>
-                </div>
-                <div class="feature-card" data-feature="kpis">
-                    <div class="icon-box"><i class="bi bi-graph-up-arrow"></i></div>
-                    <h3>KPIs de Recursos Humanos</h3>
-                    <p>Monitorea el rendimiento de tu equipo con métricas clave en tiempo real.</p>
-                </div>
-                <div class="feature-card" data-feature="acceso">
-                    <div class="icon-box"><i class="bi bi-door-open-fill"></i></div>
-                    <h3>Registro de Acceso</h3>
-                    <p>Registra y monitorea el acceso de tus colaboradores de manera eficiente.</p>
-                </div>
-                <div class="feature-card" data-feature="tareas">
-                    <div class="icon-box"><i class="bi bi-list-check"></i></div>
-                    <h3>Tablero de<br> Tareas</h3>
-                    <p>Visualiza y gestiona las tareas de tu equipo en un solo lugar.</p>
+                    <ul class="check-list">
+                        <li><i class="bi bi-check2-circle"></i> Configuración de pasos personalizada por vacante.</li>
+                        <li><i class="bi bi-check2-circle"></i> Evaluación colaborativa por responsables de área.</li>
+                        <li><i class="bi bi-check2-circle"></i> Hiring flow integrado con generación de contratos.</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary mt-3 tex">Descubrir más</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Recruitment Deep Dive -->
-    <section id="recruitment" class="recruitment-section">
-        <div class="container split-section">
-            <div class="split-image">
-                <div class="ranking-preview">
-                    <div class="preview-header">Ranking de Candidatos</div>
-                    <div class="preview-item">
-                        <span class="rank">1</span>
-                        <div class="name">Juan Pérez <small>98 pts</small></div>
-                        <div class="action">Contratar</div>
-                    </div>
-                    <div class="preview-item">
-                        <span class="rank">2</span>
-                        <div class="name">María García <small>92 pts</small></div>
-                        <div class="action disabled">Procesar</div>
-                    </div>
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-card">
+                    <h2>¿Listo para modernizar tu departamento?</h2>
+                    <p>Únete a las empresas que ya están transformando su cultura con PayrollTaks.</p>
+                    <a href="#" class="btn btn-white">Hablar con un experto</a>
                 </div>
             </div>
-            <div class="split-content">
-                <h2>Reclutamiento de <span>Alto Impacto</span></h2>
-                <p>Publica vacantes, recibe postulaciones y evalúa a los candidatos con nuestro sistema de ranking
-                    basado en puntos.</p>
-                <ul class="check-list">
-                    <li><i class="bi bi-check2-circle"></i> Configuración de pasos personalizada por vacante.</li>
-                    <li><i class="bi bi-check2-circle"></i> Evaluación colaborativa por responsables de área.</li>
-                    <li><i class="bi bi-check2-circle"></i> Hiring flow integrado con generación de contratos.</li>
-                </ul>
-                <a href="#" class="btn btn-primary mt-3 tex">Descubrir más</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-card">
-                <h2>¿Listo para modernizar tu departamento?</h2>
-                <p>Únete a las empresas que ya están transformando su cultura con PayrollTaks.</p>
-                <a href="#" class="btn btn-white">Hablar con un experto</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Feature Modal -->
-    <div id="feature-modal" class="feature-modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-content" style="overflow-y: hidden; overflow-x: hidden;">
-            <button class="modal-close" aria-label="Cerrar modal">
-                <i class="bi bi-x-lg"></i>
-            </button>
-            <div class="modal-header">
-                <h2 id="modal-title"></h2>
-            </div>
-            <div class="modal-body">
-                <div>
-                    <div class="media-section">
-                        <div class="video-container" id="modal-video"></div>
+        <!-- Feature Modal -->
+        <div id="feature-modal" class="feature-modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content" style="overflow-y: hidden; overflow-x: hidden;">
+                <button class="modal-close" aria-label="Cerrar modal">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+                <div class="modal-header">
+                    <h2 id="modal-title"></h2>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="media-section">
+                            <div class="video-container" id="modal-video"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="logo-payrooltask.png" width="200" alt="PayrollTaks Logo">
+                    </a>
+                    <p>Innovación constante para el éxito de tu capital humano.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Plataforma</h4>
+                    <ul>
+                        <li><a href="#">Reclutamiento</a></li>
+                        <li><a href="#">Nómina</a></li>
+                        <li><a href="#">Documentos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="#">Centro de ayuda</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container footer-bottom">
+                <p>&copy; 2026 PayrollTaks Platform. Todos los derechos reservados.</p>
+            </div>
+        </footer>
     </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <a href="#" class="logo">
-                    <img src="logo-payrooltask.png" width="200" alt="PayrollTaks Logo">
-                </a>
-                <p>Innovación constante para el éxito de tu capital humano.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Plataforma</h4>
-                <ul>
-                    <li><a href="#">Reclutamiento</a></li>
-                    <li><a href="#">Nómina</a></li>
-                    <li><a href="#">Documentos</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Soporte</h4>
-                <ul>
-                    <li><a href="#">Centro de ayuda</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">API</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <p>&copy; 2026 PayrollTaks Platform. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
     <script>
         (function () {
             const toggle = document.getElementById('theme-toggle');
@@ -370,13 +375,13 @@
                 card.addEventListener('click', () => {
                     const featureKey = card.getAttribute('data-feature');
                     const data = featureData[featureKey];
-                    
+
                     if (data) {
                         modalTitle.textContent = data.title;
-                        
+
                         // Clear previous content and add video
                         modalVideo.innerHTML = `<video src="${data.video}" controls autoplay></video>`;
-                        
+
                         // Show modal
                         featureModal.classList.add('active');
                         document.body.style.overflow = 'hidden';
