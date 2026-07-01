@@ -1,46 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PayrollTaks - Transformación Digital para Gestión Humana</title>
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Bootstrap Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PayrollTaks - Transformación Digital para Gestión Humana</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div>
-        <img src="construccionpng.png" alt="" width="100%" height="100%">
-    </div>
-    <!-- Navbar -->
-    <div class="pagina" style="display: none;">
+    <body>
+        <!-- Navbar -->
         <nav class="navbar">
             <div class="container">
                 <a href="#" class="logo">
-                    <img src="logo-payrooltask.png" width="200" alt="PayrollTaks Logo">
+                    <img
+                        src="logo-payrooltask.png"
+                        width="200"
+                        alt="PayrollTaks Logo"
+                    />
                 </a>
                 <ul class="nav-links">
                     <li><a href="#features">Funciones</a></li>
                     <li><a href="#recruitment">Reclutamiento</a></li>
-                    <li><a href="#automation">Automatización</a></li>
+                    <li><a href="#payroll">Automatización</a></li>
                     <li><a href="#payroll">Nómina</a></li>
                 </ul>
                 <div class="nav-cta">
-
-                    <a href="https://payrolltask-main-5kvhnv.free.laravel.cloud/" class="btn btn-outline">Acceso</a>
+                    <a
+                        href="https://payrolltask-main-5kvhnv.free.laravel.cloud/"
+                        class="btn btn-outline"
+                        >Acceso</a
+                    >
                     <a href="#contact" class="btn btn-primary">Empezar Ahora</a>
-
                 </div>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                <button
+                    id="theme-toggle"
+                    class="theme-toggle"
+                    aria-label="Cambiar tema"
+                >
                     <i class="bi bi-sun-fill icon-sun"></i>
                     <i class="bi bi-moon-stars-fill icon-moon"></i>
                 </button>
-                <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Abrir menú">
+                <button
+                    id="mobile-menu-toggle"
+                    class="mobile-menu-toggle"
+                    aria-label="Abrir menú"
+                >
                     <i class="bi bi-list"></i>
                 </button>
             </div>
@@ -55,7 +70,11 @@
                 <li><a href="#payroll">Nómina</a></li>
             </ul>
             <div class="nav-cta">
-                <a href="https://payrolltask-main-5kvhnv.free.laravel.cloud/" class="btn btn-outline">Acceso</a>
+                <a
+                    href="https://payrolltask-main-5kvhnv.free.laravel.cloud/"
+                    class="btn btn-outline"
+                    >Acceso</a
+                >
                 <a href="#contact" class="btn btn-primary">Empezar Ahora</a>
             </div>
         </div>
@@ -66,12 +85,18 @@
                 <div class="hero-content">
                     <span class="badge">Nueva Era de RRHH</span>
                     <h1>Gestión Humana <span>Simplificada</span> y Potente</h1>
-                    <p>La plataforma integral que automatiza desde el reclutamiento hasta la nómina, permitiéndote
-                        enfocarte
-                        en lo más importante: las personas.</p>
+                    <p>
+                        La plataforma integral que automatiza desde el
+                        reclutamiento hasta la nómina, permitiéndote enfocarte
+                        en lo más importante: las personas.
+                    </p>
                     <div class="hero-actions">
-                        <a href="#contact" class="btn btn-outline">Solicitar Demo</a>
-                        <a href="#features" class="btn btn-outline">Ver funciones <i class="bi bi-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-outline"
+                            >Solicitar Demo</a
+                        >
+                        <a href="#features" class="btn btn-outline"
+                            >Ver funciones <i class="bi bi-arrow-right"></i
+                        ></a>
                     </div>
                     <div class="hero-stats">
                         <div class="stat">
@@ -86,7 +111,10 @@
                 </div>
                 <div class="hero-image">
                     <div class="image-wrapper">
-                        <img src="hr_platform_hero.png" alt="HR Dashboard Preview">
+                        <img
+                            src="hr_platform_hero.png"
+                            alt="HR Dashboard Preview"
+                        />
                         <div class="glass-card card-1">
                             <i class="bi bi-check-circle-fill"></i>
                             <span>Candidato Contratado</span>
@@ -105,56 +133,289 @@
             <div class="container">
                 <div class="section-header">
                     <h2>Todo lo que tu equipo <span>necesita</span></h2>
-                    <p>Módulos diseñados por expertos en gestión humana para optimizar cada proceso administrativo.</p>
+                    <p>
+                        Módulos diseñados por expertos en gestión humana para
+                        optimizar cada proceso administrativo.
+                    </p>
                 </div>
                 <div class="features-grid">
                     <div class="feature-card" data-feature="nomina">
-                        <div class="icon-box"><i class="bi bi-calculator-fill"></i></div>
+                        <div class="icon-box">
+                            <i class="bi bi-calculator-fill"></i>
+                        </div>
                         <h3>Nómina Automatizada</h3>
-                        <p>Cálculos precisos de TSS, ISR(IR-17), beneficios y horas extras cumpliendo con la normativa
-                            vigente.</p>
+                        <p>
+                            Cálculos precisos de TSS, ISR(IR-17), beneficios y
+                            horas extras cumpliendo con la normativa vigente.
+                        </p>
                     </div>
                     <div class="feature-card" data-feature="reclutamiento">
-                        <div class="icon-box"><i class="bi bi-file-earmark-text-fill"></i></div>
+                        <div class="icon-box">
+                            <i class="bi bi-file-earmark-text-fill"></i>
+                        </div>
                         <h3>Reclutamiento y Selección</h3>
-                        <p>Gestiona todo el ciclo de vida del reclutamiento con un sistema de ranking
-                            basado en puntos.</p>
+                        <p>
+                            Gestiona todo el ciclo de vida del reclutamiento con
+                            un sistema de ranking basado en puntos.
+                        </p>
                     </div>
                     <div class="feature-card" data-feature="contratos">
-                        <div class="icon-box"><i class="bi bi-file-earmark-check-fill"></i></div>
+                        <div class="icon-box">
+                            <i class="bi bi-file-earmark-check-fill"></i>
+                        </div>
                         <h3>Generación de Contratos</h3>
-                        <p>Automatiza la creación de documentos legales con plantillas personalizables y variables
-                            dinámicas.</p>
+                        <p>
+                            Automatiza la creación de documentos legales con
+                            plantillas personalizables y variables dinámicas.
+                        </p>
                     </div>
                     <div class="feature-card" data-feature="organigrama">
-                        <div class="icon-box"><i class="bi bi-people-fill"></i></div>
+                        <div class="icon-box">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
                         <h3>Organigrama</h3>
-                        <p>Visualiza la estructura organizacional de tu empresa de manera clara y actualizada.</p>
+                        <p>
+                            Visualiza la estructura organizacional de tu empresa
+                            de manera clara y actualizada.
+                        </p>
                     </div>
                     <div class="feature-card" data-feature="expedientes">
-                        <div class="icon-box"><i class="bi bi-people-fill"></i></div>
+                        <div class="icon-box">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
                         <h3>Expedientes Digitales</h3>
-                        <p>Centraliza toda la información de tus colaboradores en un solo lugar, seguro y accesible.</p>
+                        <p>
+                            Centraliza toda la información de tus colaboradores
+                            en un solo lugar, seguro y accesible.
+                        </p>
                     </div>
                     <div class="feature-card" data-feature="solicitudes">
-                        <div class="icon-box"><i class="bi bi-calendar-check-fill"></i></div>
+                        <div class="icon-box">
+                            <i class="bi bi-calendar-check-fill"></i>
+                        </div>
                         <h3>Gestión de Solicitudes</h3>
-                        <p>Vacaciones, permisos y licencias gestionadas de forma digital con flujos de aprobación.</p>
+                        <p>
+                            Vacaciones, permisos y licencias gestionadas de
+                            forma digital con flujos de aprobación.
+                        </p>
                     </div>
                     <div class="feature-card" data-feature="kpis">
-                        <div class="icon-box"><i class="bi bi-graph-up-arrow"></i></div>
+                        <div class="icon-box">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
                         <h3>KPIs de Recursos Humanos</h3>
-                        <p>Monitorea el rendimiento de tu equipo con métricas clave en tiempo real.</p>
+                        <p>
+                            Monitorea el rendimiento de tu equipo con métricas
+                            clave en tiempo real.
+                        </p>
                     </div>
                     <div class="feature-card" data-feature="acceso">
-                        <div class="icon-box"><i class="bi bi-door-open-fill"></i></div>
+                        <div class="icon-box">
+                            <i class="bi bi-door-open-fill"></i>
+                        </div>
                         <h3>Registro de Acceso</h3>
-                        <p>Registra y monitorea el acceso de tus colaboradores de manera eficiente.</p>
+                        <p>
+                            Registra y monitorea el acceso de tus colaboradores
+                            de manera eficiente.
+                        </p>
                     </div>
-                    <div class="feature-card" data-feature="tareas">
-                        <div class="icon-box"><i class="bi bi-list-check"></i></div>
-                        <h3>Tablero de<br> Tareas</h3>
-                        <p>Visualiza y gestiona las tareas de tu equipo en un solo lugar.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payroll & Automation Section -->
+        <section id="payroll" class="payroll-automation-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nómina y Automatizaciones <span>Inteligentes</span></h2>
+                    <p>
+                        Potencia tu gestión de nómina con cálculos precisos,
+                        automatizaciones complejas y cumplimiento normativo.
+                    </p>
+                </div>
+
+                <!-- Payroll Features Grid -->
+                <div class="payroll-features-grid">
+                    <!-- Column 1: Cálculos y Normativa -->
+                    <div class="payroll-feature-group">
+                        <div class="payroll-feature-header">
+                            <i class="bi bi-calculator-fill"></i>
+                            <h3>Cálculos Precisos</h3>
+                        </div>
+                        <ul class="payroll-list">
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                <div>
+                                    <strong>TSS Automático</strong>
+                                    <span
+                                        >Descuentos por salud, pensión y seguro
+                                        de paro</span
+                                    >
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                <div>
+                                    <strong>ISR (IR-17)</strong>
+                                    <span
+                                        >Cálculo impositivo según normativa
+                                        vigente</span
+                                    >
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                <div>
+                                    <strong>Horas Extras</strong>
+                                    <span
+                                        >Cálculos diurnos, nocturnos y
+                                        festivos</span
+                                    >
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                <div>
+                                    <strong>Bonificaciones de Ley</strong>
+                                    <span
+                                        >Cálculo automático de aguinaldo y
+                                        regalía</span
+                                    >
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2: Automatizaciones -->
+                    <div class="payroll-feature-group">
+                        <div class="payroll-feature-header">
+                            <i class="bi bi-lightning-fill"></i>
+                            <h3>Automatizaciones Complejas</h3>
+                        </div>
+                        <ul class="payroll-list">
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                <div>
+                                    <strong>Procesamiento en Lotes</strong>
+                                    <span
+                                        >Genera nómina de 100+ empleados en
+                                        segundos</span
+                                    >
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                <div>
+                                    <strong>Cálculo de Vacaciones</strong>
+                                    <span
+                                        >Automático según antigüedad y
+                                        normativa</span
+                                    >
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                <div>
+                                    <strong>Provisiones Contables</strong>
+                                    <span
+                                        >Registros automáticos para
+                                        auditoría</span
+                                    >
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                <div>
+                                    <strong>Exportación a Contabilidad</strong>
+                                    <span
+                                        >Integración directa con sistemas
+                                        contables</span
+                                    >
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Reportes y Análisis -->
+                    <div class="payroll-feature-group">
+                        <div class="payroll-feature-header">
+                            <i class="bi bi-graph-up-arrow"></i>
+                            <h3>Reportes Inteligentes</h3>
+                        </div>
+                        <ul class="payroll-list">
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                <div>
+                                    <strong>Nómina Detallada</strong>
+                                    <span
+                                        >Desglose completo por empleado y
+                                        concepto</span
+                                    >
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                <div>
+                                    <strong>Análisis de Costos</strong>
+                                    <span
+                                        >Costo total de nómina por
+                                        departamento</span
+                                    >
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                <div>
+                                    <strong>Histórico de Nóminas</strong>
+                                    <span
+                                        >Consulta datos de periodos
+                                        anteriores</span
+                                    >
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle"></i>
+                                <div>
+                                    <strong>Cumplimiento Normativo</strong>
+                                    <span
+                                        >Reportes para auditoría y entes
+                                        reguladores</span
+                                    >
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="payroll-stats-section">
+                    <div class="payroll-stat-card">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Precisión en cálculos</div>
+                        <div class="stat-description">
+                            Cumplimiento normativo garantizado
+                        </div>
+                    </div>
+                    <div class="payroll-stat-card">
+                        <div class="stat-number">80%</div>
+                        <div class="stat-label">Tiempo ahorrado</div>
+                        <div class="stat-description">
+                            En procesos de nómina manual
+                        </div>
+                    </div>
+                    <div class="payroll-stat-card">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Disponibilidad</div>
+                        <div class="stat-description">
+                            Procesamiento automático sin paradas
+                        </div>
+                    </div>
+                    <div class="payroll-stat-card">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Escalabilidad</div>
+                        <div class="stat-description">
+                            Desde 10 hasta 10,000 empleados
+                        </div>
                     </div>
                 </div>
             </div>
@@ -168,26 +429,41 @@
                         <div class="preview-header">Ranking de Candidatos</div>
                         <div class="preview-item">
                             <span class="rank">1</span>
-                            <div class="name">Juan Pérez <small>98 pts</small></div>
+                            <div class="name">
+                                Juan Pérez <small>98 pts</small>
+                            </div>
                             <div class="action">Contratar</div>
                         </div>
                         <div class="preview-item">
                             <span class="rank">2</span>
-                            <div class="name">María García <small>92 pts</small></div>
+                            <div class="name">
+                                María García <small>92 pts</small>
+                            </div>
                             <div class="action disabled">Procesar</div>
                         </div>
                     </div>
                 </div>
                 <div class="split-content">
                     <h2>Reclutamiento de <span>Alto Impacto</span></h2>
-                    <p>Publica vacantes, recibe postulaciones y evalúa a los candidatos con nuestro sistema de ranking
-                        basado en puntos.</p>
+                    <p>
+                        Publica vacantes, recibe postulaciones y evalúa a los
+                        candidatos con nuestro sistema de ranking basado en
+                        puntos.
+                    </p>
                     <ul class="check-list">
-                        <li><i class="bi bi-check2-circle"></i> Configuración de pasos personalizada por vacante.</li>
-                        <li><i class="bi bi-check2-circle"></i> Evaluación colaborativa por responsables de área.</li>
-                        <li><i class="bi bi-check2-circle"></i> Hiring flow integrado con generación de contratos.</li>
+                        <li>
+                            <i class="bi bi-check2-circle"></i> Configuración de
+                            pasos personalizada por vacante.
+                        </li>
+                        <li>
+                            <i class="bi bi-check2-circle"></i> Evaluación
+                            colaborativa por responsables de área.
+                        </li>
+                        <li>
+                            <i class="bi bi-check2-circle"></i> Hiring flow
+                            integrado con generación de contratos.
+                        </li>
                     </ul>
-                    <a href="#" class="btn btn-primary mt-3 tex">Descubrir más</a>
                 </div>
             </div>
         </section>
@@ -197,40 +473,29 @@
             <div class="container">
                 <div class="cta-card">
                     <h2>¿Listo para modernizar tu departamento?</h2>
-                    <p>Únete a las empresas que ya están transformando su cultura con PayrollTaks.</p>
+                    <p>
+                        Únete a las empresas que ya están transformando su
+                        cultura con PayrollTaks.
+                    </p>
                     <a href="#" class="btn btn-white">Hablar con un experto</a>
                 </div>
             </div>
         </section>
-
-        <!-- Feature Modal -->
-        <div id="feature-modal" class="feature-modal">
-            <div class="modal-overlay"></div>
-            <div class="modal-content" style="overflow-y: hidden; overflow-x: hidden;">
-                <button class="modal-close" aria-label="Cerrar modal">
-                    <i class="bi bi-x-lg"></i>
-                </button>
-                <div class="modal-header">
-                    <h2 id="modal-title"></h2>
-                </div>
-                <div class="modal-body">
-                    <div>
-                        <div class="media-section">
-                            <div class="video-container" id="modal-video"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Footer -->
         <footer class="footer">
             <div class="container footer-grid">
                 <div class="footer-brand">
                     <a href="#" class="logo">
-                        <img src="logo-payrooltask.png" width="200" alt="PayrollTaks Logo">
+                        <img
+                            src="logo-payrooltask.png"
+                            width="200"
+                            alt="PayrollTaks Logo"
+                        />
                     </a>
-                    <p>Innovación constante para el éxito de tu capital humano.</p>
+                    <p>
+                        Innovación constante para el éxito de tu capital humano.
+                    </p>
                 </div>
                 <div class="footer-links">
                     <h4>Plataforma</h4>
@@ -250,162 +515,93 @@
                 </div>
             </div>
             <div class="container footer-bottom">
-                <p>&copy; 2026 PayrollTaks Platform. Todos los derechos reservados.</p>
+                <p>
+                    &copy; 2026 PayrollTaks Platform. Todos los derechos
+                    reservados.
+                </p>
             </div>
         </footer>
-    </div>
-    <script>
-        (function () {
-            const toggle = document.getElementById('theme-toggle');
-            const html = document.documentElement;
 
-            // Check saved preference or system preference
-            const saved = localStorage.getItem('theme');
-            if (saved) {
-                html.setAttribute('data-theme', saved);
-            } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                html.setAttribute('data-theme', 'dark');
-            }
+        <script>
+            (function () {
+                const toggle = document.getElementById("theme-toggle");
+                const html = document.documentElement;
 
-            toggle.addEventListener('click', () => {
-                const current = html.getAttribute('data-theme');
-                const next = current === 'dark' ? 'light' : 'dark';
-                if (next === 'light') {
-                    html.removeAttribute('data-theme');
-                } else {
-                    html.setAttribute('data-theme', 'dark');
+                // Check saved preference or system preference
+                const saved = localStorage.getItem("theme");
+                if (saved) {
+                    html.setAttribute("data-theme", saved);
+                } else if (
+                    window.matchMedia("(prefers-color-scheme: dark)").matches
+                ) {
+                    html.setAttribute("data-theme", "dark");
                 }
-                localStorage.setItem('theme', next);
-            });
 
-            // Listen for system theme changes
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-                if (!localStorage.getItem('theme')) {
-                    if (e.matches) {
-                        html.setAttribute('data-theme', 'dark');
+                toggle.addEventListener("click", () => {
+                    const current = html.getAttribute("data-theme");
+                    const next = current === "dark" ? "light" : "dark";
+                    if (next === "light") {
+                        html.removeAttribute("data-theme");
                     } else {
-                        html.removeAttribute('data-theme');
+                        html.setAttribute("data-theme", "dark");
                     }
-                }
-            });
-
-            // Mobile menu toggle
-            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-
-            mobileMenuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('active');
-                const icon = mobileMenuToggle.querySelector('i');
-                if (mobileMenu.classList.contains('active')) {
-                    icon.classList.remove('bi-list');
-                    icon.classList.add('bi-x');
-                } else {
-                    icon.classList.remove('bi-x');
-                    icon.classList.add('bi-list');
-                }
-            });
-
-            // Close mobile menu when clicking on a link
-            mobileMenuLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.remove('active');
-                    const icon = mobileMenuToggle.querySelector('i');
-                    icon.classList.remove('bi-x');
-                    icon.classList.add('bi-list');
+                    localStorage.setItem("theme", next);
                 });
-            });
 
-            // Close mobile menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!mobileMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
-                    mobileMenu.classList.remove('active');
-                    const icon = mobileMenuToggle.querySelector('i');
-                    icon.classList.remove('bi-x');
-                    icon.classList.add('bi-list');
-                }
-            });
+                // Listen for system theme changes
+                window
+                    .matchMedia("(prefers-color-scheme: dark)")
+                    .addEventListener("change", (e) => {
+                        if (!localStorage.getItem("theme")) {
+                            if (e.matches) {
+                                html.setAttribute("data-theme", "dark");
+                            } else {
+                                html.removeAttribute("data-theme");
+                            }
+                        }
+                    });
 
-            // Feature Modal functionality
-            const featureModal = document.getElementById('feature-modal');
-            const modalOverlay = featureModal.querySelector('.modal-overlay');
-            const modalClose = featureModal.querySelector('.modal-close');
-            const modalTitle = document.getElementById('modal-title');
-            const modalVideo = document.getElementById('modal-video');
-            const featureCards = document.querySelectorAll('.feature-card');
+                // Mobile menu toggle
+                const mobileMenuToggle =
+                    document.getElementById("mobile-menu-toggle");
+                const mobileMenu = document.getElementById("mobile-menu");
+                const mobileMenuLinks = mobileMenu.querySelectorAll("a");
 
-            // Feature data with example videos only
-            const featureData = {
-                nomina: {
-                    title: 'Nómina Automatizada',
-                    video: 'https://www.w3schools.com/html/mov_bbb.mp4'
-                },
-                reclutamiento: {
-                    title: 'Reclutamiento y Selección',
-                    video: 'https://www.w3schools.com/html/movie.mp4'
-                },
-                contratos: {
-                    title: 'Generación de Contratos',
-                    video: 'https://www.w3schools.com/html/mov_bbb.mp4'
-                },
-                expedientes: {
-                    title: 'Expedientes Digitales',
-                    video: 'https://www.w3schools.com/html/movie.mp4'
-                },
-                solicitudes: {
-                    title: 'Gestión de Solicitudes',
-                    video: 'https://www.w3schools.com/html/mov_bbb.mp4'
-                },
-                kpis: {
-                    title: 'KPIs de Recursos Humanos',
-                    video: 'https://www.w3schools.com/html/movie.mp4'
-                },
-                acceso: {
-                    title: 'Registro de Acceso',
-                    video: 'https://www.w3schools.com/html/mov_bbb.mp4'
-                },
-                tareas: {
-                    title: 'Tablero de Tareas',
-                    video: 'https://www.w3schools.com/html/movie.mp4'
-                }
-            };
-
-            // Open modal when clicking on feature card
-            featureCards.forEach(card => {
-                card.addEventListener('click', () => {
-                    const featureKey = card.getAttribute('data-feature');
-                    const data = featureData[featureKey];
-
-                    if (data) {
-                        modalTitle.textContent = data.title;
-
-                        // Clear previous content and add video
-                        modalVideo.innerHTML = `<video src="${data.video}" controls autoplay></video>`;
-
-                        // Show modal
-                        featureModal.classList.add('active');
-                        document.body.style.overflow = 'hidden';
+                mobileMenuToggle.addEventListener("click", () => {
+                    mobileMenu.classList.toggle("active");
+                    const icon = mobileMenuToggle.querySelector("i");
+                    if (mobileMenu.classList.contains("active")) {
+                        icon.classList.remove("bi-list");
+                        icon.classList.add("bi-x");
+                    } else {
+                        icon.classList.remove("bi-x");
+                        icon.classList.add("bi-list");
                     }
                 });
-            });
 
-            // Close modal functions
-            function closeModal() {
-                featureModal.classList.remove('active');
-                document.body.style.overflow = '';
-            }
+                // Close mobile menu when clicking on a link
+                mobileMenuLinks.forEach((link) => {
+                    link.addEventListener("click", () => {
+                        mobileMenu.classList.remove("active");
+                        const icon = mobileMenuToggle.querySelector("i");
+                        icon.classList.remove("bi-x");
+                        icon.classList.add("bi-list");
+                    });
+                });
 
-            modalClose.addEventListener('click', closeModal);
-            modalOverlay.addEventListener('click', closeModal);
-
-            // Close modal on Escape key
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && featureModal.classList.contains('active')) {
-                    closeModal();
-                }
-            });
-        })();
-    </script>
-</body>
-
+                // Close mobile menu when clicking outside
+                document.addEventListener("click", (e) => {
+                    if (
+                        !mobileMenu.contains(e.target) &&
+                        !mobileMenuToggle.contains(e.target)
+                    ) {
+                        mobileMenu.classList.remove("active");
+                        const icon = mobileMenuToggle.querySelector("i");
+                        icon.classList.remove("bi-x");
+                        icon.classList.add("bi-list");
+                    }
+                });
+            })();
+        </script>
+    </body>
 </html>
