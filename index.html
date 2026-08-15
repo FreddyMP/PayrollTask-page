@@ -14,7 +14,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PayrollTaks - Transformación Digital para Gestión Humana</title>
+    <title>PayrollTask - Transformación Digital para Gestión Humana</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet" />
     <!-- Bootstrap Icons -->
@@ -32,7 +32,7 @@
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">
-                <img src="logo-payrooltask.png" width="200" alt="PayrollTaks Logo" />
+                <img src="logo-payrooltask.png" width="200" alt="PayrollTask Logo" />
             </a>
             <ul class="nav-links">
                 <li><a href="#features">Funciones</a></li>
@@ -426,9 +426,9 @@
                 <h2>¿Listo para modernizar tu departamento?</h2>
                 <p>
                     Únete a las empresas que ya están transformando su
-                    cultura con PayrollTaks.
+                    cultura con PayrollTask.
                 </p>
-                <a href="#" class="btn btn-white">Hablar con un experto</a>
+                <a href="#contact" class="btn btn-white">Hablar con un experto</a>
             </div>
         </div>
     </section>
@@ -438,7 +438,7 @@
         <div class="container footer-grid">
             <div class="footer-brand">
                 <a href="#" class="logo">
-                    <img src="logo-payrooltask.png" width="200" alt="PayrollTaks Logo" />
+                    <img src="logo-payrooltask.png" width="200" alt="PayrollTask Logo" />
                 </a>
                 <p>
                     Innovación constante para el éxito de tu capital humano.
@@ -456,18 +456,49 @@
                 <h4>Soporte</h4>
                 <ul>
                     <li><a href="#">Centro de ayuda</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#contact">Contacto</a></li>
                     <li><a href="#">API</a></li>
                 </ul>
             </div>
         </div>
         <div class="container footer-bottom">
             <p>
-                &copy; 2026 PayrollTaks Platform. Todos los derechos
+                &copy; 2026 PayrollTask Platform. Todos los derechos
                 reservados.
             </p>
         </div>
     </footer>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2>Contáctanos</h2>
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Tu teléfono">
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo</label>
+                    <input type="email" id="email" name="email" required placeholder="Tu correo electrónico">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="4" required
+                        placeholder="Escribe tu mensaje aquí"></textarea>
+                </div>
+                <div id="form-status"
+                    style="display:none; margin-bottom:12px; padding:12px 16px; border-radius:8px; font-size:14px; font-weight:500;">
+                </div>
+                <button type="submit" id="btn-submit" class="btn btn-primary btn-submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
 
     <script>
         (function () {
@@ -546,6 +577,88 @@
                     const icon = mobileMenuToggle.querySelector("i");
                     icon.classList.remove("bi-x");
                     icon.classList.add("bi-list");
+                }
+            });
+
+            // Modal Logic
+            const contactLinks = document.querySelectorAll('a[href="#contact"]');
+            const contactModal = document.getElementById('contact-modal');
+            const closeModal = document.getElementById('close-modal');
+
+            contactLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    contactModal.classList.add('active');
+                });
+            });
+
+            closeModal.addEventListener('click', () => {
+                contactModal.classList.remove('active');
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target === contactModal) {
+                    contactModal.classList.remove('active');
+                }
+            });
+
+            // Contact Form — AJAX to PHP
+            const contactForm = document.getElementById('contact-form');
+            const formStatus = document.getElementById('form-status');
+            const btnSubmit = document.getElementById('btn-submit');
+
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                // Basic HTML5 validation
+                if (!contactForm.checkValidity()) {
+                    contactForm.reportValidity();
+                    return;
+                }
+
+                // Loading state
+                btnSubmit.disabled = true;
+                btnSubmit.textContent = 'Enviando…';
+                formStatus.style.display = 'none';
+
+                const formData = new FormData(contactForm);
+
+                try {
+                    const response = await fetch('send_mail.php', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    const result = await response.json();
+
+                    formStatus.style.display = 'block';
+
+                    if (result.success) {
+                        formStatus.textContent = result.message;
+                        formStatus.style.background = 'rgba(34,197,94,0.15)';
+                        formStatus.style.color = '#16a34a';
+                        formStatus.style.border = '1px solid rgba(34,197,94,0.3)';
+                        contactForm.reset();
+                        // Cerrar modal después de 2.5 s
+                        setTimeout(() => {
+                            contactModal.classList.remove('active');
+                            formStatus.style.display = 'none';
+                        }, 2500);
+                    } else {
+                        formStatus.textContent = result.message;
+                        formStatus.style.background = 'rgba(239,68,68,0.15)';
+                        formStatus.style.color = '#dc2626';
+                        formStatus.style.border = '1px solid rgba(239,68,68,0.3)';
+                    }
+                } catch (err) {
+                    formStatus.style.display = 'block';
+                    formStatus.textContent = 'Error de conexión. Por favor, intenta de nuevo.';
+                    formStatus.style.background = 'rgba(239,68,68,0.15)';
+                    formStatus.style.color = '#dc2626';
+                    formStatus.style.border = '1px solid rgba(239,68,68,0.3)';
+                } finally {
+                    btnSubmit.disabled = false;
+                    btnSubmit.textContent = 'Enviar Mensaje';
                 }
             });
         })();
